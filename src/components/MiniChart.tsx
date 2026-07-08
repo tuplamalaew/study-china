@@ -48,7 +48,7 @@ export function MiniChart({ categoryId, title, gameHistory, isDanger = false, th
               <Tooltip 
                 contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #334155', borderRadius: '8px', color: '#f8fafc', fontSize: '12px' }}
                 itemStyle={{ color: theme.tooltip }}
-                formatter={(value: number | string) => [`${value}%`, 'Accuracy']}
+                formatter={(value: any) => [`${value}%`, 'Accuracy']}
                 labelFormatter={(label) => `Game ${label}`}
                 cursor={{ stroke: '#475569', strokeWidth: 1 }}
               />

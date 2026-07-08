@@ -25,7 +25,7 @@ interface GamePlayingViewProps {
   remainingQuestions: number;
   totalAttempts: number;
   isPaused: boolean;
-  audio: { playSound: (file: string) => void };
+  audio: { playSound: (file: string) => void, audioIsPlaying?: boolean, audioFinishedAt?: number | null };
   timeLeft: number;
   isTransitioning: boolean;
   selectedAnswer: string | null;
