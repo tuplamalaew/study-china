@@ -56,4 +56,3 @@ If you want to clone this repository to run it locally or study the source code,
 ## 📬 Contact
 *Feel free to reach out for inquiries or collaborations!*
 - GitHub: [@tuplamalaew](https://github.com/tuplamalaew)
-- LinkedIn: [Your Name](#)
