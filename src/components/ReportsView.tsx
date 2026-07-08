@@ -2,14 +2,14 @@
 
 import React, { useMemo } from 'react';
 import { ResponsiveContainer, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Bar, Cell } from 'recharts';
-import type { GameState, WeeklyReport, DailyReport, DayEntry } from '../data/types';
+import type { GameState, WeeklyReport, DailyReport } from '../data/types';
 import { formatPinyin } from '../lib/utils';
 
 interface ReportsViewProps {
   setGameState: (state: GameState) => void;
   calendarWeekOffset: number;
   setCalendarWeekOffset: React.Dispatch<React.SetStateAction<number>>;
-  currentWeekDates: DayEntry[];
+  currentWeekDates: any[];
   selectedDateStr: string;
   setSelectedDateStr: React.Dispatch<React.SetStateAction<string>>;
   dailyReportsMap: Record<string, DailyReport>;
@@ -134,7 +134,7 @@ export function ReportsView({
                   <Tooltip 
                     cursor={{ fill: 'rgba(30, 41, 59, 0.5)' }}
                     contentStyle={{ backgroundColor: '#0f172a', border: '1px solid #334155', borderRadius: '12px', color: '#f8fafc', fontWeight: 'bold' }}
-                    formatter={(value: number | string) => [`${value}%`, 'Accuracy']}
+                    formatter={(value: any) => [`${value}%`, 'Accuracy']}
                     labelFormatter={(label, payload) => {
                        if (payload && payload.length > 0) return payload[0].payload.fullDate;
                        return label;

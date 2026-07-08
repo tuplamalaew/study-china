@@ -61,7 +61,7 @@ export function Overlays({
                     const rankArray = activeModule === 'initials' ? INITIALS_RANKS : activeModule === 'finals' ? FINALS_RANKS : TONES_RANKS;
                     const modalCurrentRankInfo = totalRankInfo;
 
-                   return rankArray.map((r: { emoji: string, name: string }, i: number) => {
+                   return rankArray.map((r: { emoji: string, name: string, maxExp: number }, i: number) => {
                      const isCurrent = modalCurrentRankInfo.level === i + 1;
                      const isLocked = modalCurrentRankInfo.level < i + 1;
                      return (

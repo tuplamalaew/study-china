@@ -134,7 +134,7 @@ export function StatsView({
                   <Tooltip 
                     contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #334155', borderRadius: '12px', color: '#f8fafc', padding: '12px' }}
                     itemStyle={{ color: '#38bdf8', fontWeight: 'bold' }}
-                    formatter={(value: number | string) => [`${value}%`, 'Accuracy']}
+                    formatter={(value: any) => [`${value}%`, 'Accuracy']}
                     labelFormatter={(label) => `Game ${label}`}
                   />
                   <Line type="monotone" dataKey="accuracy" stroke={statsFilter.includes('focus-6') ? '#f43f5e' : '#38bdf8'} strokeWidth={4} dot={{ r: 4, fill: statsFilter.includes('focus-6') ? '#e11d48' : '#0ea5e9', strokeWidth: 2 }} activeDot={{ r: 8 }} />
